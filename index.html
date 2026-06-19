@@ -18,8 +18,11 @@
             background-size: 400% 400%;
             animation: magicalBG 20s ease infinite;
             color: #e0d4f5; font-family: 'Lora', Georgia, serif;
-            min-height: 100vh; overflow: hidden;
+            min-height: 100vh; 
+            /* CORREÇÃO AQUI: Esconde só a barra horizontal, permite rolar para baixo */
+            overflow-x: hidden; 
             display: flex; align-items: center; justify-content: center;
+            padding: 40px 0;
         }
 
         @keyframes magicalBG {
@@ -49,6 +52,7 @@
 
         header {
             text-align: center; position: relative; z-index: 10; padding: 20px;
+            width: 100%; max-width: 900px;
         }
 
         .magic-quote {
@@ -93,6 +97,30 @@
         }
 
         .cta-btn:hover { transform: scale(1.1); letter-spacing: 3px; }
+
+        /* REGRAS PARA O CELULAR */
+        @media (max-width: 768px) {
+            .magic-quote {
+                font-size: 2.2rem;
+                margin-bottom: 0px;
+            }
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+            .hero-text {
+                font-size: 1.1rem;
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+            .cta-btn {
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+            .wonderland-item {
+                opacity: 0.1; /* Deixa os emojis mais fracos no celular para não atrapalhar a leitura */
+            }
+        }
     </style>
 </head>
 <body>
@@ -109,7 +137,6 @@
         <p class="hero-text">
             Wonderland is not just a place; it is a state of mind where the laws of physics and logic are completely turned upside down. In this world, time can stop at exactly 6:00 PM forever, animals debate philosophy, and eating a simple piece of mushroom can violently change your size.
         </p>
-        <!-- AQUI ESTÁ A MÁGICA: O link leva para a página do conteúdo -->
         <button class="cta-btn" onclick="window.location.href='conteudo.html'">Down the Rabbit Hole 🕳️</button>
     </header>
 
