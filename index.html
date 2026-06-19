@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Realm of Nonsense</title>
+    <title>Enter Wonderland</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Mystery+Quest&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
             animation: magicalBG 20s ease infinite;
             color: #e0d4f5; font-family: 'Lora', Georgia, serif;
             min-height: 100vh; 
-            /* CORREÇÃO AQUI: Esconde só a barra horizontal, permite rolar para baixo */
             overflow-x: hidden; 
             display: flex; align-items: center; justify-content: center;
             padding: 40px 0;
@@ -98,28 +97,12 @@
 
         .cta-btn:hover { transform: scale(1.1); letter-spacing: 3px; }
 
-        /* REGRAS PARA O CELULAR */
         @media (max-width: 768px) {
-            .magic-quote {
-                font-size: 2.2rem;
-                margin-bottom: 0px;
-            }
-            h1 {
-                font-size: 3rem;
-                margin-bottom: 20px;
-            }
-            .hero-text {
-                font-size: 1.1rem;
-                padding: 20px;
-                margin-bottom: 30px;
-            }
-            .cta-btn {
-                font-size: 1.1rem;
-                padding: 15px 30px;
-            }
-            .wonderland-item {
-                opacity: 0.1; /* Deixa os emojis mais fracos no celular para não atrapalhar a leitura */
-            }
+            .magic-quote { font-size: 2.2rem; margin-bottom: 0px; }
+            h1 { font-size: 3rem; margin-bottom: 20px; }
+            .hero-text { font-size: 1.1rem; padding: 20px; margin-bottom: 30px; }
+            .cta-btn { font-size: 1.1rem; padding: 15px 30px; }
+            .wonderland-item { opacity: 0.1; }
         }
     </style>
 </head>
@@ -135,7 +118,7 @@
         <div class="magic-quote">We're all mad here...</div>
         <h1>The Realm of Nonsense</h1>
         <p class="hero-text">
-            Wonderland is not just a place; it is a state of mind where the laws of physics and logic are completely turned upside down. In this world, time can stop at exactly 6:00 PM forever, animals debate philosophy, and eating a simple piece of mushroom can violently change your size.
+            Wonderland is a crazy place where normal rules don't work. Here, time can freeze forever, animals can talk, and a magic mushroom can make you very big or very small.
         </p>
         <button class="cta-btn" onclick="window.location.href='conteudo.html'">Down the Rabbit Hole 🕳️</button>
     </header>
