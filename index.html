@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Mystery+Quest&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box; margin: 0; padding: 0;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="gold" stroke="purple" stroke-width="1"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>') 12 12, auto !important;
+        }
+
+        body {
+            background: linear-gradient(45deg, #130124, #001f1f, #2a0845, #1a0033, #0d1b2a);
+            background-size: 400% 400%;
+            animation: magicalBG 20s ease infinite;
+            color: #e0d4f5; font-family: 'Lora', Georgia, serif;
+            min-height: 100vh; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        @keyframes magicalBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Elementos flutuantes */
+        .wonderland-item {
+            position: absolute; font-size: 3rem; opacity: 0.15;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+            animation: float-around linear infinite; z-index: 0; pointer-events: none;
+        }
+        .item1 { top: 10%; left: 10%; animation-duration: 25s; }
+        .item2 { top: 40%; right: 5%; font-size: 4rem; animation-duration: 35s; animation-direction: reverse; }
+        .item3 { bottom: 20%; left: 15%; animation-duration: 30s; }
+        .item4 { top: 60%; left: 50%; font-size: 2.5rem; animation-duration: 40s; }
+        .item5 { top: 20%; right: 20%; font-size: 5rem; animation-duration: 28s; }
+
+        @keyframes float-around {
+            0% { transform: translateY(0) rotate(0deg) scale(1); }
+            33% { transform: translateY(-100px) rotate(120deg) scale(1.2); }
+            66% { transform: translateY(50px) rotate(240deg) scale(0.8); }
+            100% { transform: translateY(0) rotate(360deg) scale(1); }
+        }
+
+        header {
+            text-align: center; position: relative; z-index: 10; padding: 20px;
+        }
+
+        .magic-quote {
+            font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: #7df9ff;
+            text-shadow: 0 0 15px #7df9ff, 0 0 30px #0000ff; margin-bottom: -20px;
+            transform: rotate(-8deg); display: inline-block;
+            animation: breathe 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe {
+            from { transform: rotate(-8deg) scale(0.95); text-shadow: 0 0 15px #7df9ff; }
+            to { transform: rotate(-5deg) scale(1.05); text-shadow: 0 0 25px #7df9ff, 0 0 40px #0000ff; }
+        }
+
+        h1 {
+            font-family: 'Mystery Quest', cursive; font-size: 5rem; color: #ffda7b;
+            letter-spacing: 2px; margin-bottom: 30px;
+            text-shadow: 3px 3px 0px #8a2be2, -3px -3px 0px #ff00ff, 0 0 30px rgba(255, 218, 123, 0.6);
+        }
+
+        .hero-text {
+            max-width: 800px; margin: 0 auto 50px auto; font-size: 1.3rem; color: #fff;
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff007f, #7df9ff, #8a2be2, #ff007f);
+            background-size: 300%; color: #ffffff; padding: 18px 45px;
+            font-family: 'Cinzel Decorative', sans-serif; font-weight: bold; font-size: 1.3rem;
+            text-decoration: none; border-radius: 50px; transition: all 0.5s ease;
+            border: 2px solid rgba(255,255,255,0.5);
+            animation: glowing-button 4s linear infinite; cursor: pointer;
+        }
+
+        @keyframes glowing-button {
+            0% { background-position: 0% 50%; box-shadow: 0 0 20px #ff007f; }
+            50% { background-position: 100% 50%; box-shadow: 0 0 40px #7df9ff; }
+            100% { background-position: 0% 50%; box-shadow: 0 0 20px #ff007f; }
+        }
+
+        .cta-btn:hover { transform: scale(1.1); letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+
+    <div class="wonderland-item item1">🍄</div>
+    <div class="wonderland-item item2">⏱️</div>
+    <div class="wonderland-item item3">☕</div>
+    <div class="wonderland-item item4">🗝️</div>
+    <div class="wonderland-item item5">🎩</div>
+
+    <header>
+        <div class="magic-quote">We're all mad here...</div>
+        <h1>The Realm of Nonsense</h1>
+        <p class="hero-text">
+            Wonderland is not just a place; it is a state of mind where the laws of physics and logic are completely turned upside down. In this world, time can stop at exactly 6:00 PM forever, animals debate philosophy, and eating a simple piece of mushroom can violently change your size.
+        </p>
+        <!-- AQUI ESTÁ A MÁGICA: O link leva para a página do conteúdo -->
+        <button class="cta-btn" onclick="window.location.href='conteudo.html'">Down the Rabbit Hole 🕳️</button>
+    </header>
+
+</body>
+</html>
